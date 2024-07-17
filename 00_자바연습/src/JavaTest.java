@@ -10,7 +10,7 @@ public class JavaTest {
 	public static void main(String[] args) {
 		System.out.println("이클립스 사용중");
 		
-		// sysout > ctrl + spacebar > Enter 자동완성
+		/** sysout > ctrl + spacebar > Enter 자동완성*/
 		System.out.println("메모장 보다 쉽다 개꿀띠");
 		
 	
