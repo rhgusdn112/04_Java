@@ -23,15 +23,20 @@ public class PrintEx1 {
 		 * 
 		 * [Java] String name = "홍길동"; System.out.printf("나는 %s 입니다", name);
 		 * 
-		 * %d : 정수 (byte, short, int) %c : 문자 (char) %s : 문자열 (String) %b : 논리형
-		 * (boolean) %f : 실수형 (float/double)
+		 * %d : 정수     (byte, short, int) 
+		 * %c : 문자	    (char) 
+		 * %s : 문자열	(String) 
+		 * %b : 논리형	(boolean) 
+		 * %f : 실수형 	(float/double)
 		 * 
 		 * 
-		 * 양수 : 오른쪽 정렬 음수(-) : 왼쪽 정렬
+		 * 양수(+) : 오른쪽 정렬 
+		 * 음수(-) : 왼쪽 정렬
 		 * 
 		 * %숫자d : 정수가 출력된 칸을 숫자 만큼 확보 ex) %-6d : ㅁㅁㅁㅁㅁㅁ
 		 * 
-		 * %.숫자f : 소수점 아래 몇째 자리 까지 표시할지 지정 (지정된 자리 아래에서 반올림 처리)
+		 * %.숫자f : 소수점 아래 몇째 자리 까지 표시할지 지정
+		 * -> (지정된 자리 아래에서 반올림 처리)
 		 */
 
 		// print(), println() 확인
@@ -40,7 +45,7 @@ public class PrintEx1 {
 		System.out.println("와 자바 재밌다~"); // 줄바꿈 o
 
 		System.out.println(); // 출력 내용 없이 줄바꿈 == <br>
-		System.out.println();
+		System.out.println(); 
 		System.out.println();
 
 		System.out.println("[printf() 확인하기]");
@@ -56,7 +61,9 @@ public class PrintEx1 {
 		System.out.println(name + "은 " + age + "세 " + gender + "성으로 키는 " + height + "cm 이고, 자바 공부 여부 : " + javaStudy);
 
 		// printf() 버전
-		System.out.printf("소개 : %s은 %d세 %c성으로 키는 %fcm 이고, 자바 공부 여부 : %b", name, age, gender, height, javaStudy);
+		System.out.printf("소개 : %s은 %d세 %c성으로 키는 %fcm 이고,"
+				+ " 자바 공부 여부 : %b",
+				name, age, gender, height, javaStudy);
 
 		System.out.println(); // 줄바꿈
 		System.out.printf("%s/%f", name, height); // 홍길동/212.500000

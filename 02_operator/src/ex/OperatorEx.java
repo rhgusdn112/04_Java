@@ -24,9 +24,15 @@ public class OperatorEx {
 	/**
 	 * 입력 받은 두 정수의 산술 연산 결과 출력하기
 	 * 
-	 * 정수 입력 1 : 10 정수 입력 2 : 3
+	 * 정수 입력 1 : 10 
+	 * 정수 입력 2 : 3
 	 * 
-	 * 10 + 3 = 13 10 - 3 = 7 10 * 3 = 30 10 / 3 = 3 10 % 3 = 1
+	 * 10 + 3 = 13 
+	 * 10 - 3 = 7 
+	 * 10 * 3 = 30 
+	 * 10 / 3 = 3 
+	 * 10 % 3 = 1
+	 * 
 	 */
 	public void method1() {
 		System.out.print("정수 입력 1 : ");
@@ -53,8 +59,11 @@ public class OperatorEx {
 	/**
 	 * 입력 받은 정수가 3의 배수가 맞는지 확인
 	 * 
-	 * public void method2() { Scanner sc = new Scanner(System.in);
-	 * System.out.print("정수 입력 : "); int input = sc.nextInt(); // input이 3의 배수가 맞으면
+	 * public void method2() { 
+	 * Scanner sc = new Scanner(System.in);
+	 * System.out.print("정수 입력 : "); 
+	 * int input = sc.nextInt(); 
+	 * // input이 3의 배수가 맞으면
 	 * true, 아니면 false 저장 boolean isTrue = input % 3 == 0;
 	 * 
 	 * System.out.printf("%d는 3의 배수인가? %b", input, isTrue); }
@@ -62,10 +71,17 @@ public class OperatorEx {
 	/**
 	 * 첫 번째 입력 받은 수가 두 번째 입력받은 수의 배수가 맞는지 확인
 	 * 
-	 * [true 인 경우] 첫 번째 입력 : 20 두 번째 입력 : 5 20은 5의 배수가 맞는가? true
+	 * [true 인 경우] 
+	 * 첫 번째 입력 : 20 
+	 * 두 번째 입력 : 5 
+	 * 20은 5의 배수가 맞는가? true
 	 * 
-	 * [false 인 경우] 첫 번째 입력 : 9 두 번째 입력 : 4 9는 4의 배수가 맞는가? false
+	 * [false 인 경우] 
+	 * 첫 번째 입력 : 9 
+	 * 두 번째 입력 : 4 
+	 * 9는 4의 배수가 맞는가? false
 	 */
+	
 	public void method3() {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("첫 번째 입력 : ");
@@ -113,28 +129,52 @@ public class OperatorEx {
 	 * 1에서 10 사이 난수를 발생시켜
 	 * 홀짝 검사 
 	 */
+ /* 삼항연산자를 사용 할 경우	*/
+//	public void method6() {
+//		// 1 ~ 10 사이 난수
+//		int ran = (int)(Math.random() * 10 + 1);
+//		String result = (ran % 2 == 0) ? "짝수" : "홀수";
+//		System.out.printf("%d는 %s", ran, result);
+//	}
 	
+	/* if 함수만을 사용했을 경우 */
 	public void method6() {
-		// 1 ~ 10 사이 난수
-		int ran = (int)(Math.random() * 10 + 1);
-		String result = (ran % 2 == 0) ? "짝수" : "홀수";
-		System.out.printf("%d는 %s", ran, result);
+		int ran = (int)(Math.random() * 10 + 1); // 1부터 10까지 난수
+		String result;
+		if (ran % 2 == 0) {
+			System.out.printf("%d는 짝수입니다",ran);
+		}else {
+			System.out.printf("%d는 홀수입니다",ran);
+		}
 	}
-	
 	/**
 	 * [삼항 연산자 2]
 	 * 나이를 입력 받아 
 	 * 13세 이하면 "어린이"
 	 * 14세 이상 19세 이하 "청소년"
 	 * 20세 이상 "성인" 출력하기
-	 * 
 	 */
 	public void method7() {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("나이 입력 :");
 		int age = sc.nextInt();
 		
-		String result = age <= 13 ? "어린이" : (age >= 20 ? "성인" : "청소년");
+		String result = 
+				age <= 13 ? "어린이" : (age >= 20 ? "성인" : "청소년");
 		System.out.println(result);
 	}
+ 
+	// 코드연습
+	public void method8(){
+		System.out.println(" 나이 입력 : " );
+		Scanner sc = new Scanner(System.in);
+		int num = sc.nextInt();
+
+		if(num >=0 && num < 13){
+		 System.out.printf("%d세는 어린이 입니다",num);
+		}else if(num >= 20)	System.out.printf("%d세는 성인 입니다",num);
+		 else  System.out.printf("%d세는 청소년 입니다",num);
+	
+	}
 }
+
