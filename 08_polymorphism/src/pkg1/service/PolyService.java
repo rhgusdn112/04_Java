@@ -10,7 +10,6 @@ public class PolyService {
 	 * 객체가 가지고 있는 필드 정보 출력
 	 * @param obj : Object 객체를 참조하는 참조 변수
 	 * 	  - Object -> 모든 클래스의 최상위 부모!!
-	 *
 	 */
 	public void printObject(Object obj) {
 		
