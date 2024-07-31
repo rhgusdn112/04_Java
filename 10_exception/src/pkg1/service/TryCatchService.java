@@ -176,13 +176,13 @@ public class TryCatchService {
 	
 		}
 		
+	}
 		/**
 		 * catch 문에 다형성 적용 복습 + 예외 강제 발생
 		 * 
 		 * - throw new 예외클래스();
 		 * 	-> 생성된 예외 객체를 던짐 == 예외 강제 발생
 		 */
-	}
 		public void test5() {
 			
 			// Exception 클래스 : 모든 예외의 최상위 부모
