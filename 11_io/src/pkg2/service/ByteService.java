@@ -140,7 +140,7 @@ public class ByteService {
 	/**
 	 * 버퍼를 이용한 "빠르고 효율적인" 파일 출력
 	 * - FileOutputStream (기반 스트림)
-	 * - BufferedOutputream (보조 스트림)
+	 * - BufferedOutputStream (보조 스트림)
 	 * 
 	 */
 	public void bufferedFileByteOutput() {
