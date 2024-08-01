@@ -1,4 +1,12 @@
 package dao;
-public interface MemberDao {
 
-}
+import java.util.List;
+
+import dto.Member;
+
+public interface MemberDao{
+		
+		List<Member> getMemberList();
+		
+	}
+
