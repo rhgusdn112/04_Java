@@ -76,8 +76,7 @@ public class StudentView {
 		char gender = sc.next().charAt(0);
 		
 		// 학생 객체 생성하여 입력받은 데이터를 저장(세팅)
-		StudentDTO std = 
-				new StudentDTO(studentNumber, name, gender);
+		StudentDTO std = new StudentDTO(studentNumber, name, gender);
 		
 		// StudentService 객체의 addStudent() 호출 후 
 		// 결과 반환 받기
@@ -293,7 +292,7 @@ public class StudentView {
 			if(arr[i] > max) max = arr[i]; // max 에 새 최대값 대입
 			
 			// 최소값 비교
-			if(arr[i] < min) min = arr[i]; // min 에 새 최소값 대입
+			if(arr[i] < min) min = arr[i]; // min 에 새 최대값 대입
 			
 		}
 		System.out.println("max : "+ max); // 70
