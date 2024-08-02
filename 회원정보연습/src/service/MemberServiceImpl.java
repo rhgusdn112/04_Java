@@ -1,5 +1,6 @@
 package service;
 
+import java.io.IOException;
 import java.util.List;
 
 import dao.MemberDao;
@@ -10,9 +11,12 @@ public class MemberServiceImpl implements MemberService {
 
 	private MemberDao dao = null;
 	
-	public MemberServiceImpl() throws  {
+	public MemberServiceImpl() throws IOException, ClassNotFoundException {
 		
 		dao = new MemberDaoImpl();
+	}
+	
+	public boolean addMember(String name, String phone) throws IOException{
 	
 	
 	// 1) 회원 목록을 얻어와서 휴대폰 번호 중복이 있는지 검사하는 구문
@@ -34,8 +38,12 @@ public class MemberServiceImpl implements MemberService {
 	
 	return result;
 }
+@Override
+public List<Member> getMemberList() {
+	return dao.getMemberList();
+}
 
-	public List<Member> getMemberList() {
-		return dao.getMemberList();
-	}
+}
+
+
 }

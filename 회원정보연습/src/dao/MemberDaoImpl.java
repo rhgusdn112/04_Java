@@ -52,20 +52,15 @@ public class MemberDaoImpl implements MemberDao {
 		return true;
 	}
 	
-	public void saveFile() throws IOException{
-		
-		try {
-			oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH));
-			oos.writeObject(memberList);
-		} finally {
-			if(oos != null) oos.close(); // flush() + 메모리 반환
-		}
-	}
-
-
 	@Override
-	public List<Member> getMemberList() {
-		return null;
+	public void saveFile() throws IOException {
+		
+	try {
+		oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH));
+		oos.writeObject(memberList);
+	}finally {
+		if(oos != null) oos.close();
 	}
+}
 	
 }

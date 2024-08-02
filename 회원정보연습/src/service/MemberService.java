@@ -7,8 +7,7 @@ import dto.Member;
 
 public interface MemberService {
 
-	public abstract boolean addMember(String name, String phone) 
-			throws IOException;
+	public abstract boolean addMember(String name, String phone) throws IOException;
 	
 	public abstract List<Member> getMemberList();
 }
