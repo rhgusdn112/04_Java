@@ -1,5 +1,7 @@
 package service;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
 
 import dao.MemberDao;
@@ -10,11 +12,17 @@ public class MemberServiceImpl implements MemberService {
 
 	private MemberDao dao = null;
 	
-	public MemberServiceImpl() throws  {
+	public MemberServiceImpl() throws FileNotFoundException, 
+									  ClassNotFoundException, 
+									  IOException  { 
 		
 		dao = new MemberDaoImpl();
-	
-	
+	}
+	// 회원 추가
+		@Override
+		public boolean addMember(String name, String phone) throws IOException{
+		
+		
 	// 1) 회원 목록을 얻어와서 휴대폰 번호 중복이 있는지 검사하는 구문
 	List<Member> memberList = dao.getMemberList(); // List, Member import 해야함
 	
@@ -31,6 +39,7 @@ public class MemberServiceImpl implements MemberService {
 	
 	// DAO 메서드 호출 하고 결과 반환 받는 구문
 	boolean result = dao.addMember(member);
+	
 	
 	return result;
 }
