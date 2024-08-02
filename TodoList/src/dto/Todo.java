@@ -32,5 +32,4 @@ public class Todo implements Serializable{ // 직렬화
 	// DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 	// String formattedDateTime = currentDateTime.format(formatter);
 		
-	
 }
