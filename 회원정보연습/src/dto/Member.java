@@ -8,14 +8,14 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
 
-public class Member implements Serializable{
+
+public class Member implements Serializable{ 
 
 	public static final int COMMON  = 0;
 	public static final int GOLD 	= 1;
